@@ -126,6 +126,7 @@ void lgk_boot_main(void)
             lgk_boot_intf_init();
             lgk_boot_log("force update mode \r\n");
             uint16_t timeout_count = 0;
+
             /*!< Wait for USB enumeration to complete */
             while (usb_device_is_configured() == false) {
                 lgk_boot_deley_ms(1);

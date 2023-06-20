@@ -25,6 +25,7 @@ void lgk_boot_sys_reset(void)
 
 __attribute__((weak)) bool lgk_boot_app_is_vaild(uint32_t check_code_add)
 {
+    return false;
     (void)check_code_add;
 #ifdef USE_MCU_BOOT
     struct boot_rsp rsp;

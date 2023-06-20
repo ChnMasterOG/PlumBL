@@ -1,7 +1,7 @@
 #pragma once
 
 #ifndef HARD_ENTER_BOOT
-#define HARD_ENTER_BOOT 1
+#define HARD_ENTER_BOOT 0
 #endif
 
 #if HARD_ENTER_BOOT
@@ -38,7 +38,7 @@ extern uint32_t _eusrstack[];
 #define BOOT_START_ADDRESS  FLASH_BASE_ADDR
 #define APP_CODE_START_ADDR (BOOT_START_ADDRESS + 0x0000f000) /*!< 60k */
 #define APP_CODE_END_ADDR   (BOOT_START_ADDRESS + 0x00070000) /*!< 448k */
-#define HEAD_SIZE           0x1000                            /*!< 4K */
+#define HEAD_SIZE           0x10000                           /*!< 64K */
 
 /*!< Flash Start Address of Application */
 #ifndef BOARD_FLASH_APP_START

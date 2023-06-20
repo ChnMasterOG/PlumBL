@@ -33,8 +33,8 @@ typedef enum
 } FunctionalState;
 typedef enum
 {
-    CHRESET = 0,
-    SET = !CHRESET
+    RESET = 0,
+    SET = !RESET
 } FlagStatus, ITStatus;
 
 /* memory mapped structure for Program Fast Interrupt Controller (PFIC) */

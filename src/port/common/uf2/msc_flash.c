@@ -26,34 +26,38 @@ const uint8_t msc_flash_descriptor[] = {
     ///////////////////////////////////////
     0x14,                       /* bLength */
     USB_DESCRIPTOR_TYPE_STRING, /* bDescriptorType */
-    'L', 0x00,                  /* wcChar0 */
-    'G', 0x00,                  /* wcChar1 */
-    ' ', 0x00,                  /* wcChar2 */
-    'S', 0x00,                  /* wcChar3 */
-    't', 0x00,                  /* wcChar4 */
-    'u', 0x00,                  /* wcChar5 */
-    'd', 0x00,                  /* wcChar6 */
-    'i', 0x00,                  /* wcChar7 */
-    'o', 0x00,                  /* wcChar8 */
+    'C', 0x00,                  /* wcChar0 */
+    'h', 0x00,                  /* wcChar1 */
+    'e', 0x00,                  /* wcChar2 */
+    'r', 0x00,                  /* wcChar3 */
+    'r', 0x00,                  /* wcChar4 */
+    'y', 0x00,                  /* wcChar5 */
+    'U', 0x00,                  /* wcChar6 */
+    'S', 0x00,                  /* wcChar7 */
+    'B', 0x00,                  /* wcChar8 */
     ///////////////////////////////////////
     /// string2 descriptor
     ///////////////////////////////////////
-    0x1e,                       /* bLength */
+    0x26,                       /* bLength */
     USB_DESCRIPTOR_TYPE_STRING, /* bDescriptorType */
-    'P', 0x00,                  /* wcChar0 */
-    'l', 0x00,                  /* wcChar1 */
-    'u', 0x00,                  /* wcChar2 */
-    'm', 0x00,                  /* wcChar3 */
-    'B', 0x00,                  /* wcChar4 */
-    'o', 0x00,                  /* wcChar5 */
-    'o', 0x00,                  /* wcChar6 */
-    't', 0x00,                  /* wcChar7 */
-    'l', 0x00,                  /* wcChar8 */
-    'o', 0x00,                  /* wcChar9 */
-    'a', 0x00,                  /* wcChar10 */
-    'd', 0x00,                  /* wcChar11 */
-    'e', 0x00,                  /* wcChar12 */
-    'r', 0x00,                  /* wcChar13 */
+    'C', 0x00,                  /* wcChar0 */
+    'h', 0x00,                  /* wcChar1 */
+    'e', 0x00,                  /* wcChar2 */
+    'r', 0x00,                  /* wcChar3 */
+    'r', 0x00,                  /* wcChar4 */
+    'y', 0x00,                  /* wcChar5 */
+    'U', 0x00,                  /* wcChar6 */
+    'S', 0x00,                  /* wcChar7 */
+    'B', 0x00,                  /* wcChar8 */
+    ' ', 0x00,                  /* wcChar9 */
+    'M', 0x00,                  /* wcChar10 */
+    'S', 0x00,                  /* wcChar11 */
+    'C', 0x00,                  /* wcChar12 */
+    ' ', 0x00,                  /* wcChar13 */
+    'D', 0x00,                  /* wcChar14 */
+    'E', 0x00,                  /* wcChar15 */
+    'M', 0x00,                  /* wcChar16 */
+    'O', 0x00,                  /* wcChar17 */
     ///////////////////////////////////////
     /// string3 descriptor
     ///////////////////////////////////////
@@ -93,7 +97,7 @@ void usbd_configure_done_callback(void)
 }
 
 #define BLOCK_SIZE  512
-#define BLOCK_COUNT 0x10109
+#define BLOCK_COUNT 0xC0000
 
 #include "uf2.h"
 static WriteState _wr_state = { 0 };
